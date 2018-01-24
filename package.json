@@ -4,13 +4,14 @@
   "description": "test doa build",
   "main": "source/client.js",
   "scripts": {
-    "start": "brb serve --config='./webpack.shared.config'",
-    "build": "brb build --config='./webpack.shared.config'",
+    "start": "NODE_ENV=development ENV_FILE=.env.development brb serve --config='./webpack.shared.config'",
+    "build": "NODE_ENV=development ENV_FILE=.env.development brb build --config='./webpack.shared.config'",
+    "build:staging": "ENV_FILE=.env.staging BASE_PATH=/mymarathonStaging/ yarn run build",
     "lint": "brb lint"
   },
   "author": "Everydayhero",
   "dependencies": {
-    "prismic-utils": "^5.0.0",
+    "prismic-utils": "^6.1.1",
     "boiler-room-builder": "^1.4.1",
     "boiler-room-runner": "^1.2.3",
     "constructicon": "^0.10.4",

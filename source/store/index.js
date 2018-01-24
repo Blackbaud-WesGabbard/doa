@@ -6,6 +6,8 @@ import {
 import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 
+import home from '../Home'
+
 // @reducers
 
 const middleware = process.env.NODE_ENV === 'production'

@@ -11,14 +11,14 @@ export default (props, traits) => {
 
   return {
     header: {
-      backgroundColor: colors.primary,
+      backgroundColor: colors.light,
       color: colors.dark,
       height: rhythm(3)
     },
 
     container: {
       position: 'relative',
-      padding: `${rhythm(0.333)} ${rhythm(1)}`,
+      padding: rhythm(1),
       backgroundColor: toggled && colors.light,
       ':after': {
         content: '""',
@@ -63,6 +63,22 @@ export default (props, traits) => {
       [mediaQuery('md')]: {
         flexDirection: 'row',
         display: 'flex'
+      }
+    },
+
+    user: {
+      minWidth: rhythm(6),
+
+      [mediaQuery('md')]: {
+        position: 'absolute',
+        top: rhythm(0.6),
+        right: rhythm(0.666)
+      },
+
+      [mediaQuery('lg')]: {
+        top: 'auto',
+        bottom: rhythm(0.55),
+        right: rhythm(1.5)
       }
     }
   }

@@ -12,13 +12,13 @@ const hooks = {
 
 const mapState = () => ({})
 
-const Home = () => {
+const About = () => {
   return (
-    <h1>Hello, homepage!</h1>
+    <h1>Hello, about us!</h1>
   )
 }
 
 export default compose(
   connect(mapState),
   provideHooks(hooks)
-)(Home)
+)(About)
