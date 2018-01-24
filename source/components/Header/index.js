@@ -14,8 +14,6 @@ class Header extends React.Component {
       styles
     } = this.props
 
-    console.log(this.props)
-
     return (
       <header className={classNames.header}>
         <Container styles={styles.container}>

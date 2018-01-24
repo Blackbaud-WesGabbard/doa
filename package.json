@@ -11,7 +11,6 @@
   },
   "author": "Everydayhero",
   "dependencies": {
-    "prismic-utils": "^6.1.1",
     "boiler-room-builder": "^1.4.1",
     "boiler-room-runner": "^1.2.3",
     "constructicon": "^0.10.4",
@@ -20,6 +19,7 @@
     "dotenv-webpack": "^1.4.1",
     "es6-promise": "^4.0.5",
     "minimal.css": "^1.0.1",
+    "prismic-utils": "^6.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-helmet": "^4.0.0",

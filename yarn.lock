@@ -4014,7 +4014,7 @@ micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-"micromatch@github:jonschlinkert/micromatch#2.2.0":
+micromatch@jonschlinkert/micromatch#2.2.0:
   version "2.2.0"
   resolved "https://codeload.github.com/jonschlinkert/micromatch/tar.gz/5017fd78202e04c684cc31d3c2fb1f469ea222ff"
   dependencies:
@@ -4943,9 +4943,9 @@ prismic-richtext@^0.2.6:
     prismic-helpers "^1.0.0"
     uuid "^3.1.0"
 
-prismic-utils@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/prismic-utils/-/prismic-utils-5.0.2.tgz#7037c731e2b4992a4b6e6be73cd7daf1eb534991"
+prismic-utils@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/prismic-utils/-/prismic-utils-6.1.1.tgz#9753b1c4f09af1701979e23c162788f3aed5f18f"
   dependencies:
     lodash "^4.17.4"
     prismic-dom "^2.0.6"
@@ -4953,7 +4953,6 @@ prismic-utils@^5.0.0:
     prismic-reactjs "^0.2.3"
     react-dom "^15"
     sinon "^2.3.2"
-    striptags "^2.1.1"
 
 private@^0.1.6, private@^0.1.7:
   version "0.1.8"
@@ -6077,10 +6076,6 @@ strip-json-comments@~1.0.1:
 strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
-
-striptags@^2.1.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/striptags/-/striptags-2.2.1.tgz#4c450b708d41b8bf39cf24c49ff234fc6aabfd32"
 
 style-loader@^0.13.1:
   version "0.13.2"

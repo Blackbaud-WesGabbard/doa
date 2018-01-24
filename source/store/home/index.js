@@ -6,6 +6,7 @@ import {
 // Constants
 const c = {
   NAMESPACE: 'app/home'
+
 }
 
 // Action
@@ -17,4 +18,14 @@ export const fetchHome = () => (
 )
 
 // Reducer
-export default createDocumentReducer(c.NAMESPACE)
+export default createDocumentReducer(c.NAMESPACE, {
+  initialState: {
+    status: 'fetching',
+    data: {
+      heading: [],
+      content: [],
+      banner: [],
+      people: []
+    }
+  }
+})

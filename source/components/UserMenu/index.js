@@ -12,8 +12,6 @@ import Link from '../Link'
 
 class UserMenu extends Component {
   constructor (props) {
-    console.log(props)
-
     super(props)
     this.logout = this.logout.bind(this)
   }
