@@ -21,6 +21,9 @@ const Root = ({
       </RichText>
       )}
     <AboutUs {...home} />
+    {/* or you could pass the props individually instead of spread
+      <AboutUs people={home.people} about={home.about} />
+    */}
   </div>
 )
 
