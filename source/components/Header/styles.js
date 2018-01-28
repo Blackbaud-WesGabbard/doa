@@ -2,12 +2,11 @@ export default (props, traits) => {
   const {
     rhythm,
     colors,
-    mediaQuery
+    mediaQuery,
+    treatments
   } = traits
 
   const { toggled } = props
-
-  console.log(traits)
 
   return {
     header: {
@@ -64,6 +63,38 @@ export default (props, traits) => {
         flexDirection: 'row',
         display: 'flex'
       }
+    },
+
+    link: {
+      display: 'block',
+      padding: rhythm(0.333),
+      background: colors.light,
+      color: colors.primary,
+      ...treatments.head,
+      [mediaQuery('md')]: {
+        color: colors.tertiary,
+        ':first-child': {
+          paddingLeft: 0
+        },
+        ':hover': {
+          opacity: 0.45
+        },
+        ':focus': {
+          opacity: 0.75
+        }
+      },
+      [mediaQuery('lg')]: {
+        padding: rhythm(0.5)
+      },
+      [mediaQuery('md', 'max-width')]: {
+        marginBottom: rhythm(0.25),
+        minWidth: rhythm(6),
+        textAlign: 'center'
+      }
+    },
+
+    active: {
+      color: colors.primary
     },
 
     user: {

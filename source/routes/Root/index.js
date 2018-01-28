@@ -3,8 +3,11 @@ import { provideHooks } from 'redial'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import Helmet from 'react-helmet'
-import * as traits from '../../lib/traits'
 
+import * as traits from '../../lib/traits'
+import unlessFetched from '../../lib/unlessFetched'
+
+import { fetchContainer } from '../../store/container'
 import TraitsProvider from 'constructicon/traits-provider'
 import Container from 'constructicon/container'
 import RootContainer from '../../components/RootContainer'
@@ -40,11 +43,15 @@ const hooks = {
     dispatch,
     state
   }) {
-    return Promise.all([])
+    return Promise.all([
+      unlessFetched(state.container, () => dispatch(fetchContainer()))
+    ])
   }
 }
 
-const mapState = () => ({})
+const mapState = (container) => ({
+  container: container.data
+})
 
 export default compose(
   connect(mapState),

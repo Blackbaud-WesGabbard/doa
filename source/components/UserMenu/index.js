@@ -9,6 +9,8 @@ import { clearSession } from '../../store/sessionUser'
 
 import Button from 'constructicon/button'
 import Link from '../Link'
+import LoginForm from '../LoginForm'
+import Modal from 'constructicon/modal'
 
 class UserMenu extends Component {
   constructor (props) {
@@ -25,6 +27,8 @@ class UserMenu extends Component {
 
   render () {
     const {
+      onToggle,
+      toggled,
       classNames,
       styles
     } = this.props
@@ -33,7 +37,7 @@ class UserMenu extends Component {
       <div className={classNames.links}>
         <Button
           tag={Link}
-          to='/login'
+          onClick={onToggle}
           target='_self'
           background='primary'
           styles={styles.button}
@@ -43,6 +47,12 @@ class UserMenu extends Component {
           background='tertiary'
           styles={styles.button}
           children='Donate' />
+        <Modal
+          isOpen={toggled}
+          onRequestClose={onToggle}
+          contentLabel='Login'>
+          <LoginForm />
+        </Modal>
       </div>
     )
   }
