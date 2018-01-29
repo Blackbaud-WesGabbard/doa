@@ -7,6 +7,8 @@ import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 
 import home from './home'
+import sessionPage from './sessionPage'
+import sessionUser from './sessionUser'
 
 // @reducers
 
@@ -17,7 +19,9 @@ const middleware = process.env.NODE_ENV === 'production'
 export const configureStore = (initialState = {}) => (
   createStore(
     combineReducers({
-      home
+      home,
+      sessionPage,
+      sessionUser
     }),
     initialState,
     applyMiddleware(...middleware)

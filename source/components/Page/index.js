@@ -3,8 +3,6 @@ import { withStyles } from 'constructicon/lib/css'
 import styles from './styles'
 
 import Container from 'constructicon/container'
-import Footer from '../Footer'
-import Header from '../Header'
 import Heading from 'constructicon/heading'
 import Helmet from 'react-helmet'
 import RichText from 'constructicon/rich-text'
@@ -20,7 +18,6 @@ const Page = ({
 }) => (
   <div>
     <Helmet title={title} />
-    <Header />
     <main className={classNames.main}>
       <Container width={width} spacing={{ y: 2, x: 1.5 }}>
         {heading && <Heading tag='h1' styles={styles.heading}>{heading}</Heading>}
@@ -28,7 +25,6 @@ const Page = ({
         {children}
       </Container>
     </main>
-    <Footer showHero={false} />
   </div>
 )
 

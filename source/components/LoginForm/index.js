@@ -25,8 +25,6 @@ import RichText from 'constructicon/rich-text'
 class LoginForm extends Component {
   constructor (props) {
     super(props)
-    console.log('const')
-    console.log(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
       errors: [],
@@ -41,7 +39,6 @@ class LoginForm extends Component {
 
     this.props.form.submit().then((data) => {
       this.props.loginUser(data).then((res) => {
-        console.log(res)
       }).catch(() => {
         console.log('error')
         return this.setState({ errorModal: true })
@@ -63,16 +60,14 @@ class LoginForm extends Component {
 
   redirectIfSignedIn (props) {
     const { user, page, router } = props
-    console.log('enter redirect')
-    console.log(props)
 
-    /* if (user.status === 'fetched') {
+    if (user.status === 'fetched') {
       if (page.status === 'fetched') {
         this.setState({ authenticated: true })
       } else if (page.status === 'failed') {
         router.push('/create-page')
       }
-    } */
+    }
   }
 
   render () {
@@ -86,19 +81,16 @@ class LoginForm extends Component {
     const {
       errors,
       serverError,
-      errorModal,
-      authenticated
+      errorModal
     } = this.state
 
-    // const isLoading = [user.status, page.status].indexOf('fetching') > -1
-
-    const isLoading = false
+    const isLoading = [user.status, page.status].indexOf('fetching') > -1
 
     return (
       <Container>
         <Grid spacing={1}>
           <GridColumn styles={styles.column} md={6}>
-            <Heading tag='h3' styles={styles.heading}>or login with email</Heading>
+            <Heading tag='h3' styles={styles.heading}>Login with email</Heading>
             <Form
               onSubmit={this.handleSubmit}
               errors={(form.invalid || serverError) ? errors : []}
@@ -110,7 +102,10 @@ class LoginForm extends Component {
               footer={(
                 <RichText styles={styles.footer}>
                   <p>
-                    <Link to='/reset-password'>Forgot your password?</Link>
+                    <Link
+                      to='/reset-password'
+                    >
+                    Forgot your password?</Link>
                   </p>
                 </RichText>
               )}>

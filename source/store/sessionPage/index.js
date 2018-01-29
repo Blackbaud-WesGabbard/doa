@@ -107,7 +107,6 @@ const pageFailure = (error) => ({
 
 // Reducer
 export default (state = {}, { type, payload }) => {
-  console.log('reducer')
   switch (type) {
     case types.fetch:
       return {

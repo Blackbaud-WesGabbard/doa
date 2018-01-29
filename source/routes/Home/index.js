@@ -6,6 +6,7 @@ import { compose } from 'redux'
 import { fetchHome } from '../../store/home'
 
 import AboutUs from '../../components/AboutUs'
+import CampaignData from '../../components/CampaignData'
 import Hero from '../../components/Hero'
 import RichText from 'constructicon/rich-text'
 import { PrismicRichText } from 'prismic-utils'
@@ -15,6 +16,7 @@ const Root = ({
 }) => (
   <div>
     <Hero banner={home.banner} heading={home.heading} />
+    <CampaignData />
     {home.content && (
       <RichText>
         <PrismicRichText>{home.content}</PrismicRichText>
